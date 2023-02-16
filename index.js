@@ -18,6 +18,6 @@ app.use(routes);
 
 db.once('open', () => {
   app.listen(PORT, () => {
-    console.log(`API server for this activity running on port ${PORT}!`);
+    console.log(`API server for this project running on port ${PORT}!`);
   });
 });
