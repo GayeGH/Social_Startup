@@ -17,16 +17,19 @@ const userSchema = new Schema(
             'Please add a valid email address.',
           ],
     },
-    // thoughts: {
-    //     type: [_id],
-    //     ref: "Thoughts"
-    // }, 
+    thoughts: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Thoughts',
+      },
+    ],
 
-    // friends: {
-    //     type: [_id],
-    //     ref: "User",
-
-    // },
+    friends: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+      },
+    ],
     },
     {
         toJSON:{
@@ -35,12 +38,12 @@ const userSchema = new Schema(
         id: false,
     }
 );
-  userSchema
-    .virtual('friendCount')
-      .get(function () {
-        return `${friends.length}`;
-      }
-);
+  // userSchema
+  //   .virtual('friendCount')
+  //     .get(function () {
+  //       return `${friends.length}`;
+  //     }
+//);
 
 const User = model('user', userSchema);
 module.exports = User;

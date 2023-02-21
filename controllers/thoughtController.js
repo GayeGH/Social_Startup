@@ -1,4 +1,4 @@
-const { Course, Student } = require('../models');
+const { Thoughts, User } = require('../models');
 
 module.exports = {
   // Get all thoughts
@@ -9,12 +9,12 @@ module.exports = {
   },
   // Get a thought
   getSingleThoughts(req, res) {
-    Thoughts.findOne({ _id: req.params.courseId })
+    Thoughts.findOne({ _id: req.params.thoughtsId })
       .select('-__v')
       .then((thoughts) =>
         !thoughts
           ? res.status(404).json({ message: 'No thought with that ID' })
-          : res.json(course)
+          : res.json(thoughts)
       )
       .catch((err) => res.status(500).json(err));
   },
@@ -29,7 +29,7 @@ module.exports = {
   },
   // Delete a thought
   deleteThoughts(req, res) {
-    Thoughts.findOneAndDelete({ _id: req.params.courseId })
+    Thoughts.findOneAndDelete({ _id: req.params.thoughtsId })
       .then((thoughts) =>
         !thoughts
           ? res.status(404).json({ message: 'No thought with that ID' })
@@ -48,8 +48,43 @@ module.exports = {
       .then((thoughts) =>
         !thoughts
           ? res.status(404).json({ message: 'No thought with this id!' })
-          : res.json(course)
+          : res.json(thoughts)
+      )
+      .catch((err) => res.status(500).json(err));
+  },
+  // Add an assignment to a student
+  addReaction(req, res) {
+    console.log('You are adding a reaction');
+    console.log(req.body);
+    Thoughts.findOneAndUpdate(
+      { _id: req.params.thoughtsId },
+      { $addToSet: { reactions: req.body } },
+      { runValidators: true, new: true }
+    )
+      .then((thought) =>
+        !thought
+          ? res
+              .status(404)
+              .json({ message: 'No thought found with that ID :(' })
+          : res.json(thought)
+      )
+      .catch((err) => res.status(500).json(err));
+  },
+  // Remove assignment from a student
+  removeReactions(req, res) {
+    Thoughts.findOneAndUpdate(
+      { _id: req.params.thoughtsId },
+      { $pull: { reactions: { reactionsId: req.params.reactionsId } } },
+      { runValidators: true, new: true }
+    )
+      .then((thoughts) =>
+        !thoughts
+          ? res
+              .status(404)
+              .json({ message: 'No thought found with that ID :(' })
+          : res.json(thoughts)
       )
       .catch((err) => res.status(500).json(err));
   },
 };
+

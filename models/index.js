@@ -1,5 +1,5 @@
 const User = require('./User');
 const Thoughts = require('./Thoughts');
-//is the reaction.js file needed here?
+const Reactions = require('./Reactions');
 
-module.exports = { User, Thoughts };
+module.exports = { User, Thoughts, Reactions };
