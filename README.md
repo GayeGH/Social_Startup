@@ -11,6 +11,9 @@ Express, Mongoose
 
 In Social_Startup, users will be able to view different people and their thoughts on this back-end application. Users will be able to view all of the other people/users and read their thoughts with a get request. They will also be able to create, update and delete users and thoughts with a post request, a put request and a delete request. One will also be able to add and delete friends and also have reactions to the thoughts.
 
+<img width="1251" alt="Screen Shot 2023-02-22 at 10 02 53 AM" src="https://user-images.githubusercontent.com/112979481/220662042-7bd9ed53-5f40-44fa-8aac-daecce18542b.png">
+
+
 ## License
 
 "ISC"
