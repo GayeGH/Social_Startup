@@ -3,9 +3,15 @@ Social_Startup
 
 ## Description
 Social_Startup is a web application where users will be able to create, read, update and delete thoughts on a social platform. 
-## Installation
 
-Express, Mongoose
+Video 1: [
+](https://drive.google.com/file/d/1vhnCDWTE3uqegLT2c697WEX1b6kld0rh/view)## Installation
+
+Video 2:[
+](https://drive.google.com/file/d/1hvG1xGWMVY5qxUu5E--otMUe9Nqd2Lla/view)
+
+Video 3: [
+](https://drive.google.com/file/d/1Vf1o0ig5WI0Pk5SH7HamkqwOkPC1z__B/view)Express, Mongoose
   
 ## Usage
 
