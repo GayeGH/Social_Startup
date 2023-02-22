@@ -4,15 +4,19 @@ Social_Startup
 ## Description
 Social_Startup is a web application where users will be able to create, read, update and delete thoughts on a social platform. 
 
-Video 1: [
-](https://drive.google.com/file/d/1vhnCDWTE3uqegLT2c697WEX1b6kld0rh/view)## Installation
+Video 1: 
+[(https://drive.google.com/file/d/1vhnCDWTE3uqegLT2c697WEX1b6kld0rh/view)]
 
-Video 2:[
-](https://drive.google.com/file/d/1hvG1xGWMVY5qxUu5E--otMUe9Nqd2Lla/view)
+Video 2:
+[(https://drive.google.com/file/d/1hvG1xGWMVY5qxUu5E--otMUe9Nqd2Lla/view)]
 
-Video 3: [
-](https://drive.google.com/file/d/1Vf1o0ig5WI0Pk5SH7HamkqwOkPC1z__B/view)Express, Mongoose
-  
+Video 3: 
+[(https://drive.google.com/file/d/1Vf1o0ig5WI0Pk5SH7HamkqwOkPC1z__B/view)]
+
+
+## Installation
+Express, Mongoose
+
 ## Usage
 
 In Social_Startup, users will be able to view different people and their thoughts on this back-end application. Users will be able to view all of the other people/users and read their thoughts with a get request. They will also be able to create, update and delete users and thoughts with a post request, a put request and a delete request. One will also be able to add and delete friends and also have reactions to the thoughts.
